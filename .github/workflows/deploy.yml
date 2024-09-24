@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'docs/**'
 
 permissions:
   contents: write
@@ -24,13 +22,12 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: docs/pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
-          cd docs
           npm i
           npm run docs:build
           > src/.vuepress/dist/.nojekyll
@@ -39,4 +36,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: docs/src/.vuepress/dist
+          folder: src/.vuepress/dist
