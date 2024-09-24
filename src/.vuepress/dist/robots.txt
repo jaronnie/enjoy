@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://jzero.jaronnie.com/sitemap.xml
