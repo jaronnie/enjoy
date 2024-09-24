@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://enjoy.jaronnie.com/sitemap.xml
