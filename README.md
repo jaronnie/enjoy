@@ -1,5 +1,3 @@
 # enjoy
 
 enjoy life
-
-g
